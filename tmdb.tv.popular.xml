@@ -8,7 +8,7 @@
         <sampleQuery>select * from {table}</sampleQuery>
     </meta>
     <bindings>
-        <select itemPath="" produces="XML">
+        <select itemPath="results.json.results" produces="XML">
             <urls>
                 <url>http://api.themoviedb.org/3/tv/popular</url>
             </urls>
