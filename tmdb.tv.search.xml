@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<table xmlns="http://query.yahooapis.com/v1/schema/table.xsd">
+    <meta>
+        <author><!-- your name or company name --></author>
+        <description><!-- description of the table --></description>
+        <documentationURL><!-- url for API documentation --></documentationURL>
+        <apiKeyURL><!-- url for getting an API key if needed --></apiKeyURL>
+        <sampleQuery>select * from {table}</sampleQuery>
+    </meta>
+    <bindings>
+        <select itemPath="" produces="JSON">
+            <urls>
+                <url>http://api.themoviedb.org/3/search/tv</url>
+            </urls>
+            <inputs>
+                <key id="api_key" default="58b7a9e1a592d14176799079d592f0b1" type="xs:string" paramType="query" required="true" />
+                <key id="query" type="xs:string" paramType="query" required="true" />
+            </inputs>
+            <execute>
+                <![CDATA[
+                    var result = request.proxy('none').jsonCompat('new').get().response;
+					response.object = result;
+                ]]>
+            </execute>
+        </select>
+     </bindings>
+</table>
