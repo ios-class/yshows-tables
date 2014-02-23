@@ -18,7 +18,7 @@
             <execute>
                 <![CDATA[
                     response.object = {
-                        1425: {
+                        "1425": {
                             src: "http://24.media.tumblr.com/6018ca761c8c5dfae87c4c6069d13e24/tumblr_n167hnI75J1srbvdlo1_400.gif",
                             cut: 17
                         },
